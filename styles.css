@@ -1,0 +1,212 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000;
+    background-image: url('https://i.postimg.cc/tRL9gVP3/SNR.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+/* Salju */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Header styles */
+.header {
+    background-color: #ffffff;
+    border-bottom: 3px solid #d20000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    margin-left: 20px;
+}
+
+.logo {
+    max-height: 40px;
+    width: auto;
+}
+
+/* Header buttons */
+.header-buttons {
+    margin-right: 20px;
+}
+
+.header-buttons a {
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.header-buttons .login {
+    background-color: #e60000;
+}
+
+.header-buttons .daftar {
+    background-color: #0000e6;
+}
+
+/* Main container */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Teks Berjalan */
+.marquee-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.main-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Icon grid styles */
+.icon-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.icon {
+    min-width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border: 2px solid #d20000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Link buttons */
+.link-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.link-buttons a {
+    display: block;
+    background-color: #d20000;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+/* Banner styles */
+.banner {
+    margin: 20px 0;
+}
+
+.responsive-banner {
+    width: 100%;
+    height: auto;
+    border: 2px solid #d20000;
+}
+
+/* Table styles */
+.info-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+}
+
+.info-table th, .info-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.info-table th {
+    background-color: #333;
+    font-weight: bold;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;  /* Mengubah teks menjadi rata tengah */
+    margin: 20px 0;
+    font-size: 12px;
+    color: white;
+}
+
+/* Popup icon styles (Positioning di bagian kiri bawah halaman) */
+.popup-icon {
+    position: fixed;
+    bottom: 20px;  /* Posisi 20px dari bawah */
+    left: 20px;    /* Posisi 20px dari kiri */
+    z-index: 10;   /* Pastikan tetap berada di atas elemen lainnya */
+}
+
+.popup-icon img {
+    width: 50px;   /* Ukuran ikon */
+    height: auto;
+    cursor: pointer;  /* Menampilkan pointer saat ikon diklik */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .icon-grid {
+        gap: 10px;
+    }
+}
